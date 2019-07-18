@@ -4,7 +4,7 @@ import json
 import re
 from inspect import getargspec
 
-from defaults import DFLT_RESULT_FIELD
+from py2api.defaults import DFLT_RESULT_FIELD
 
 
 def _strigify_val(val):
@@ -17,7 +17,7 @@ def _strigify_val(val):
     :param val: value to be stringified
     :return:
     """
-    if isinstance(val, basestring):
+    if isinstance(val, str):
         return '"' + val + '"'
     elif callable(val) or isinstance(val, type):
         return val.__name__

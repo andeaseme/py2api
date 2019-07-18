@@ -352,7 +352,7 @@ class InputTransWithAttrInURL(InputTrans):
     def __init__(self, trans_spec=None, dflt_spec=None, sources=(_JSON, _ARGS), attr_from_url='(\w+)$'):
         super(InputTransWithAttrInURL, self).__init__(trans_spec=trans_spec, dflt_spec=dflt_spec, sources=sources)
         if not callable(attr_from_url):
-            if isinstance(attr_from_url, basestring):
+            if isinstance(attr_from_url, str):
                 _attr_from_url = re.compile(attr_from_url)
             elif isinstance(attr_from_url, re_type):
                 _attr_from_url = attr_from_url

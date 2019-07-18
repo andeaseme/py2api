@@ -72,7 +72,7 @@ class ObjWrap(object):
 
         if obj_constructor_arg_names is None:  # no constructor arguments
             obj_constructor_arg_names = []
-        elif isinstance(obj_constructor_arg_names, basestring):  # a single constructor argument
+        elif isinstance(obj_constructor_arg_names, str):  # a single constructor argument
             obj_constructor_arg_names = [obj_constructor_arg_names]
         self.obj_constructor_arg_names = obj_constructor_arg_names
 
